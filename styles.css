@@ -41,6 +41,16 @@ body::after {
   animation: drift2 18s ease-in-out infinite alternate;
 }
 
+@keyframes drift {
+  from { transform: translate(-10%, -10%); }
+  to   { transform: translate(10%, 10%); }
+}
+
+@keyframes drift2 {
+  from { transform: translate(10%, -10%); }
+  to   { transform: translate(-10%, 10%); }
+}
+
 img { max-width: 100%; }
 
 a { color: inherit; text-decoration: none; }
@@ -183,6 +193,21 @@ main {
 
 .contact-list {
   padding-left: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-list a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: color 180ms ease, letter-spacing 180ms ease;
+}
+
+.contact-list a:hover {
+  color: var(--accent-2);
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 700px) {
